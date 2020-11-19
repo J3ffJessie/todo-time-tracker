@@ -27,11 +27,7 @@ import { FormDebugger } from './debugger';
                        <Field placeholder="Goals" name={`goals.${index}`} />
                      </div>
                    ))
-                 ) : (
-                   <button type="button" onClick={() => arrayHelpers.push('')}>
-                     {/* show this when user has removed all friends from the list */}
-                     Add a friend
-                   </button>
+                 )
                  )}
                  <div>
                    <button type="submit">Submit</button>

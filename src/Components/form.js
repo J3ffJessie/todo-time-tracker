@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import '../form.css';
+import { FormDebugger } from './debugger';
 
 
 const GoalForm = () => {
@@ -56,6 +57,7 @@ const GoalForm = () => {
             value={formik.values.goal3}/>
             {formik.touched.goal3 && formik.errors.goal3 ? <div>{formik.errors.goal3}</div> : null}
             <button type="submit">Submit</button>
+            <FormDebugger />
         </form>
     )}
     </Formik>

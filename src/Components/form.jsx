@@ -1,17 +1,25 @@
 import React from 'react';
-// import { Formik } from 'formik';
-// import * as Yup from 'yup';
-import '../form.css';
-// import { FormDebugger } from './debugger';
-import MyInput from './input';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Fab from '@material-ui/core/Fab';
+import Zoom from '@material-ui/core/Zoom';
 
 
-const GoalForm = () => {
-        return (
-            <MyInput />
-        );
+function Goal(props) {
+    function handleClick() {
+        props.onDelete(props.id);
+    }
+
+    return (
+        <div className="goal">
+            <h1>{props.title}</h1>
+            <p>{props.content}</p>
+            <Zoom in={true}>
+                <Fab onClick = {handleClick}>
+                    <DeleteIcon />
+                </Fab>
+            </Zoom>
+        </div>
+    );
 }
 
-
-
-export default GoalForm;
+export default Goal;

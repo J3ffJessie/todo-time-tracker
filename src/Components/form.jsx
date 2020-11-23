@@ -22,7 +22,7 @@ function deleteGoal(id) {
 return (
     <div>
         <table>
-            <th placeholder="Day">{props.title}</th>
+            <th>{props.title}</th>
             <tr>{props.content}</tr>
         </table>
     </div>

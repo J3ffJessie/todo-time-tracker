@@ -1,25 +1,34 @@
-import React from 'react';
-import DeleteIcon from '@material-ui/icons/Delete';
-import Fab from '@material-ui/core/Fab';
-import Zoom from '@material-ui/core/Zoom';
+import React, {useState} from 'react';
 
 
 function Goal(props) {
-    function handleClick() {
-        props.onDelete(props.id);
-    }
 
-    return (
-        <div className="goal">
-            <h1>{props.title}</h1>
-            <p>{props.content}</p>
-            <Zoom in={true}>
-                <Fab onClick = {handleClick}>
-                    <DeleteIcon />
-                </Fab>
-            </Zoom>
-        </div>
-    );
+const [goals, setGoals] = useState([]);
+
+function addGoal(newGoal) {
+    setGoals(prevGoals => {
+        return[...prevGoals, newGoal];
+    });
+}
+
+function deleteGoal(id) {
+    setGoals(prevGoals => {
+        return prevGoals.filter((goalItem, index) => {
+            return index !== id;
+        });
+    });
+}
+
+return (
+    <div>
+        <table>
+            <th placeholder="Day">{props.title}</th>
+            <tr>{props.content}</tr>
+        </table>
+    </div>
+
+
+);
 }
 
 export default Goal;

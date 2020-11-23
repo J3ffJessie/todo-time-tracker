@@ -46,14 +46,14 @@ function CreateGoal(props){
           name="title"
           onChange = {handleChange}
           value = {goal.title}
-          placeholder="Title" />
+          placeholder="Day" />
         )}
         <textarea
         name='content'
         onClick={expand}
         onChange={handleChange}
         value={goal.content}
-        placeholder="Whats your goal"
+        placeholder="Whats your goals"
         rows={isExpanded ? 3: 1} />
         <Zoom in={isExpanded}>
           <Fab onClick={submitGoal}>

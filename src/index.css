@@ -114,3 +114,18 @@ form.create-goal button:hover {
   cursor: pointer;
   outline: none;
 }
+
+
+table {
+  border: 1px solid black;
+  width: 100px;
+}
+
+th {
+  font-size: 1.5rem;
+  border-bottom: 1px solid black;
+}
+
+tr {
+  width: 50%;
+}

@@ -28,14 +28,26 @@ function App() {
       <Header />
       <CreateGoal onAdd={addGoal} />
       {goals.map((goalItem, index) => {
-        return (
-          <Goal
-          key={index}
-          id={index}
-          title={goalItem.title}
-          content={goalItem.content}
-          onDelete={deleteGoal} />
-        );
+        if(goalItem.title){
+          return (
+            <Goal
+            key={index}
+            id={index}
+            title={goalItem.title}
+            content={goalItem.content}
+            onDelete={deleteGoal} />
+            
+          )
+        } else {
+          return (
+            <Goal
+            key={index}
+            id={index}
+            content={goalItem.content}
+            onDelete={deleteGoal} />
+          );
+
+        }
       })}
       <Footer />
     </div>

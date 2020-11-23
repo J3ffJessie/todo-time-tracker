@@ -28,7 +28,6 @@ function App() {
       <Header />
       <CreateGoal onAdd={addGoal} />
       {goals.map((goalItem, index) => {
-        if(goalItem.title){
           return (
             <Goal
             key={index}
@@ -36,19 +35,9 @@ function App() {
             title={goalItem.title}
             content={goalItem.content}
             onDelete={deleteGoal} />
-            
-          )
-        } else {
-          return (
-            <Goal
-            key={index}
-            id={index}
-            content={goalItem.content}
-            onDelete={deleteGoal} />
           );
-
         }
-      })}
+      )}
       <Footer />
     </div>
   );

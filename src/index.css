@@ -118,7 +118,8 @@ form.create-goal button:hover {
 
 table {
   border: 1px solid black;
-  width: 100px;
+  width: 100%;
+  margin: auto;
 }
 
 th {
@@ -127,5 +128,5 @@ th {
 }
 
 tr {
-  width: 50%;
+  width: 100%;
 }

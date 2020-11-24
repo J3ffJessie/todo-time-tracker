@@ -10,7 +10,7 @@ function CreateGoal(props){
   const [isExpanded, setExpanded] = useState(false);
 
   const [goal, setGoal] = useState({
-    header:'',
+    title:'',
     content:''
   });
 
